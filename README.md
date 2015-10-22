@@ -11,7 +11,7 @@
 
 ####Installing Dependencies
 
-With Gulp, Sass, and npm installed globally, install dependencies by running the following commands from the terminal:
+With Gulp, Sass, Bourbon, Neat and npm installed globally, install dependencies by running the following commands from the terminal:
 ```
 npm install
 gulp
