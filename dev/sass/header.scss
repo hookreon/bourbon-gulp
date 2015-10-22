@@ -1,0 +1,16 @@
+@import "./utils/config";
+
+header {
+  @include span-columns(12);
+  font-family: $headerFont;
+  background: rgba(0,0,0,.8);
+  color: $white;
+  height: 60px;
+  font-weight: 600;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  @include media($mobile) {
+    background: $black;
+  }
+}

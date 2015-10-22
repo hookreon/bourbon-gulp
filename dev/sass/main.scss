@@ -1,0 +1,74 @@
+@import "./utils/config";
+
+.main {
+  background-color: $black;
+  color: $white;
+  padding-bottom: 500px;
+  clear: both;
+  @include media($tablet) {
+    padding-bottom: 50px;
+  }
+  .content {
+    @include outer-container(940px);
+    padding: 10px;
+    margin: 0 auto;
+    h3 {
+      font-family: $headerFont;
+      font-size: 35px;
+      line-height: .95em;
+      letter-spacing: -.01em;
+      .red {
+        color: $envoyRed;
+      }
+      .selected {
+        color: $twitterBlue;
+      }
+    }
+    h4 {
+      color: $gray;
+      font-size: 20px;
+      display: inline-block;
+      padding-top: 5px;
+      padding-right: 10px;
+      margin-bottom: 15px;
+    }
+    p {
+      color: $gray;
+      font-weight: 600;
+      line-height: 1.5em;
+      letter-spacing: .25px;
+      font-size: 13px;
+      margin: 0 0 5px;
+      .more {
+        cursor: pointer;
+      }
+    }
+    a {
+      color: $envoyRed;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    article {
+      @include media($large) {
+        @include span-columns(4);
+      }
+      @include media($desktop) {
+        @include span-columns(4 of 12);
+      }
+      @include media($tablet) {
+        @include span-columns(4);
+      }
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+      float: left;
+    }
+    .articleContainer {
+      border-top: 1px solid $borderBlack;
+      a {
+        display: block;
+        margin-top: 5px;
+      }
+    }
+  }
+}

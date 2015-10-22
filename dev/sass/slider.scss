@@ -1,0 +1,243 @@
+@import "./utils/config";
+
+@mixin slideBackground($background-image) {
+  background-image: url($background-image);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+
+.slider {
+  @include span-columns(12);
+  background-color: $white;
+  height: auto;
+  display: block;
+  margin-bottom:0;
+  margin-top: 60px;
+  @include media(600px) {
+    margin-top: 0;
+  }
+}
+.slick-dots {
+  bottom: 0;
+  li.slick-active {
+    button {
+      &:before {
+        opacity: 1;
+        color: $envoyRed;
+      }
+    }
+  }
+  li {
+    button {
+      &:before:hover {
+        color: $gray;
+      }
+    }
+  }
+}
+.slick-slider {
+  margin-bottom: 0;
+  position:relative;
+  .slick-track {
+      min-width: 100%;
+  }
+}
+.slickslide {
+  padding-left:0;
+  max-width:100%;
+  margin:0;
+  li {
+    img {
+      width:100%;
+      height:auto;
+    }
+  }
+}
+.slick-dots {
+  bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transform: translateY(-10%);
+  li {
+    width: 10px;
+    height:14px;
+    opacity: 1;
+    button {
+      &:before {
+        font-size: 14px;
+        color: $white;
+        opacity: 1;
+        line-height: 14px;
+        &:hover {
+          color: $gray;
+        }
+      }
+    }
+  }
+}
+.slideContent {
+  padding: 10px;
+  position: relative;
+  @include outer-container(940px);
+  .slideContentContainer {
+    position: absolute;
+    @include span-columns(6);
+    transform: translateY(15%);
+    h2 {
+      font-family: $titleFont;
+      font-size: 48px;
+      line-height: 1.25em;
+      text-transform: uppercase;
+      margin-bottom: 0;
+      @include media($tablet) {
+        font-size: 36px;
+      }
+      @include media($mobile) {
+        font-size: 28px;
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.25em;
+      color: $gray;
+      @include media($tablet) {
+        font-size: 14px;
+      }
+      @include media($mobile) {
+        display: none;
+      }
+    }
+    .mobileLink {
+      display: none;
+      @include media($mobile) {
+        display: block;
+        cursor:pointer;
+      }
+    }
+  }
+}
+.django {
+  @include slideBackground('/images/django.jpg');
+  .slideContentContainer {
+    @include span-columns(5);
+    @include media($large) {
+      transform: translateY(45%);
+    }
+    @include media($desktop) {
+      transform: translateY(25%);
+    }
+    @include media($tablet) {
+      transform: translateY(15%);
+    }
+    @include media($mobile) {
+      transform: translateY(5%);
+    }
+    h2 {
+      color: $slideRed;
+    }
+    a {
+      color: $slideRed;
+      cursor: pointer;
+    }
+  }
+}
+.vizio {
+  @include slideBackground('/images/vizio.jpg');
+  .slideContentContainer {
+    @include shift(6);
+    @include media($large) {
+      transform: translateY(25%);
+    }
+    @include media($desktop) {
+      @include span-columns(5);
+      transform: translateY(20%);
+    }
+    @include media($tablet) {
+      @include span-columns(6);
+      transform: translateY(15%);
+    }
+    @include media($mobile) {
+      transform: translateY(0);
+    }
+    h2 {
+      color: $slideRed;
+      @include media($desktop) {
+        font-size: 32px;
+      }
+    }
+    p {
+      @include media($tablet) {
+        display:none;
+      }
+    }
+    a {
+      color: $slideRed;
+      cursor: pointer;
+    }
+    .mobileLink {
+      display: none;
+      @include media($tablet) {
+        display: block;
+        cursor:pointer;
+      }
+    }
+  }
+}
+.escape {
+  @include slideBackground('/images/escape.jpg');
+  .slideContentContainer {
+    @include media($desktop) {
+      transform: translateY(20%);
+    }
+    @include media($tablet) {
+      transform: translateY(20%);
+    }
+    @include media($mobile) {
+      transform: translateY(0%);
+    }
+    h2 {
+      color: $slideOrange;
+      @include media($desktop) {
+        font-size: 32px;
+      }
+      @include media($tablet) {
+        font-size: 28px;
+      }
+    }
+    p {
+      color: $white;
+    }
+    a {
+      color: $slideOrange;
+      cursor: pointer;
+    }
+  }
+}
+.ultra {
+  @include slideBackground('/images/ultra.jpg');
+  .slideContentContainer {
+    @include media($desktop) {
+      transform: translateY(25%);
+    }
+    h2 {
+      color: $slideBlue;
+      @include media($desktop) {
+        font-size: 32px;
+      }
+      @include media($tablet) {
+        font-size: 30px;
+      }
+    }
+    a {
+      color: blue;
+      cursor: pointer;
+    }
+  }
+}
+.slick-initialized {
+  .slick-slide {
+    outline: none;
+  }
+}

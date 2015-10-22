@@ -1,0 +1,16 @@
+@import "./utils/config";
+
+.work {
+  img {
+    width: 100%;
+    padding-top: 20px;
+  }
+  h5 {
+    font-size: 18px;
+    display:inline-block;
+    margin: 12px 0 2px;
+    .blue {
+      color: $twitterBlue;
+    }
+  }
+}

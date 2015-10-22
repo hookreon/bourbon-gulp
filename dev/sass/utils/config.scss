@@ -1,0 +1,41 @@
+@import "bourbon";
+@import "neat";
+@import "./normalize";
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+
+//colors
+$envoyRed: #e34e33;
+$slideRed: #d90e0a;
+$slideOrange: #f68f1e;
+$slideBlue: #2162bc;
+$gray: #9f9f9f;
+$white: #fff;
+$twitterBlue: #67d9da;
+$twitterBlack: #464646;
+$twitterLink: #941b1e;
+$twitterDate: #e4e4e4;
+$black: #1d1d1d;
+$borderBlack: #282828;
+
+//fonts
+$titleFont: 'Oswald', arial, helvetica, sans-serif;
+$headerFont: 'Arial Bold', arial, helvetica, sans-serif;
+
+//mobile
+$mobile: new-breakpoint(max-width 600px);
+$tablet: new-breakpoint(max-width 768px);
+$desktop: new-breakpoint(min-width 769px max-width 1199px);
+$large: new-breakpoint(min-width 1200px);
+
+//box-sizing
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+//base
+body {
+  font-size: 13px;
+}

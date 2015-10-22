@@ -1,0 +1,45 @@
+@import "./utils/config";
+
+.navContainer {
+  max-width: 940px;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px 10px 15px;
+  .logo {
+    float: left;
+    width: 83px;
+    height: 25px;
+  }
+  nav {
+    ul {
+      margin-left: 25px;
+      transform: translateY(-8.75px);
+      list-style: none;
+      padding-left: 0;
+      float: left;
+      li {
+        display: inline;
+        float: left;
+        padding: 10px 11px;
+        transform: translateY(-2px);
+        .current {
+          color: $envoyRed;
+        }
+        &:first-child {
+          padding-left:0;
+        }
+      }
+      a {
+        &:hover {
+          color: $gray;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  @include media($tablet) {
+    .desktop {
+      display: none;
+    }
+  }
+}
